@@ -1,5 +1,57 @@
 *{
     margin: 0;
     border: 0;
+    padding: 0;    
+}
+
+body {
+    background-image: url(../Assets/images/Morning.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/* ========================== main ======================= */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.weather > img {
+    min-width: 42px;
+    height: 42px;
+}
+
+.Hours {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ===================== cards ======================== */
+
+.row{
+    grid-gap: 1rem;
+}
+
+.card {
     padding: 0;
+}
+
+.card > .text {
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
