@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap');
+
+
 *{
     margin: 0;
     border: 0;
     padding: 0;    
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-image: url(../Assets/images/Morning.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -13,11 +16,18 @@ body {
 
 /* ========================== main ======================= */
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 4rem 0; 
 }
 
 .weather {
@@ -36,6 +46,9 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    font-size: 28px;
+    color: #fff;
 }
 
 /* ===================== cards ======================== */
@@ -48,10 +61,22 @@ body {
     padding: 0;
 }
 
-.card > .text {
+.card-news{
+    width: 18rem;
+}
+
+span {
     display: block;
-    width: 100px;
+    width: 250px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* ========================Media========================= */
+
+@media(max-width:450px){
+    .Hours{
+        padding-bottom: 2rem;
+    }
 }
