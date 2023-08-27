@@ -1,8 +1,7 @@
 const API_KEY = ['7ce788c7f9a92d457fd3bd16562d7222', '11caa10a82f84fa289027aafd37fead7'];
-const city = 'são paulo'
 
 // Get the weather and temperature in the city
-function gerWeather(city){
+function getWeather(city){
 
     const Temp = document.getElementById('temp');
     const Weather = document.getElementById('weather');
@@ -17,7 +16,7 @@ function gerWeather(city){
         })
 }
 
-gerWeather('são paulo')
+getWeather('são paulo')
 
 // Function get theme the news and writing in html
 function getNews(theme){
