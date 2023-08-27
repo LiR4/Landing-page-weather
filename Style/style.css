@@ -1,82 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap");
 
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;    
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 
 /* ========================== main ======================= */
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 4rem 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem 0;
 }
 
 .weather {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .weather > img {
-    min-width: 42px;
-    height: 42px;
+  min-width: 42px;
+  height: 42px;
+}
+
+.infoWeather {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoWeather > p {
+  margin: 2px;
 }
 
 .Hours {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-    font-size: 28px;
-    color: #fff;
+  font-size: 28px;
+  color: #fff;
 }
 
 /* ===================== cards ======================== */
 
-.row{
-    grid-gap: 1rem;
+.row {
+  grid-gap: 1rem;
 }
 
 .card {
-    padding: 0;
+  padding: 0;
+  transition: 1ms;
+  transition-duration: 1s;
 }
 
-.card-news{
-    width: 18rem;
+.card:hover {
+  width: 20rem;
+}
+
+.card-news {
+  width: 18rem;
 }
 
 span {
-    display: block;
-    width: 250px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  display: block;
+  width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* ========================Media========================= */
 
-@media(max-width:450px){
-    .Hours{
-        padding-bottom: 2rem;
-    }
+@media (max-width: 450px) {
+  .Hours {
+    padding-bottom: 2rem;
+  }
 }

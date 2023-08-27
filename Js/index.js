@@ -13,13 +13,13 @@ function gerWeather(city){
         .then(data => {
             name.innerHTML = data['name']
             Weather.innerHTML= data['weather'][0]['main']
-            Temp.innerHTML = (parseInt(data['main']['temp'] - 273)).toFixed()
+            Temp.innerHTML = (parseInt(data['main']['temp'] - 273)).toFixed() + '°'
         })
 }
 
 gerWeather('são paulo')
 
-
+// Function get theme the news and writing in html
 function getNews(theme){
     fetch(`https://newsapi.org/v2/everything?q=${theme}&apiKey=${API_KEY[1]}`)
     .then(promisse => promisse.json())
@@ -55,22 +55,24 @@ const getTime = ()=> {
     };
 }
 
-// call the getTime function and write to the html in a loop  
+/* call the getTime function and write to the html in a loop, 
+there is a condition that changes an image for the background based on the time */
+
 setInterval(() => {
     const {hours, minutes, seconds} = getTime();
     const Hour = document.getElementById('Hour'); 
     const icon = document.getElementById('icon');
 
     if(hours >=6 && hours <=13){
-        icon.src = '../Assets/icons/summer.png'
-        document.body.style.backgroundImage = '../Assets/images/Morning.png'
+        icon.src = 'Assets/icons/summer.png'
+        document.body.style.backgroundImage = 'Assets/images/Morning.png'
     }else{
         if (hours >= 13 && hours <= 18){
-            icon.src = '../Assets/icons/afternoon.png'
-            document.body.style.backgroundImage = "url('../Assets/images/Afternoon.png')"
+            icon.src = 'Assets/icons/afternoon.png'
+            document.body.style.backgroundImage = "url('Assets/images/Afternoon.png')"
         }else{
-            icon.src = '../Assets/icons/evening.png'
-            document.body.style.backgroundImage = "url('../Assets/images/Evening.png')"
+            icon.src = 'Assets/icons/evening.png'
+            document.body.style.backgroundImage = "url('Assets/images/Evening.png')"
         }
     }
 
